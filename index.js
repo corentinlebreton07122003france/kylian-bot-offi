@@ -4,7 +4,14 @@ const client = new Discord.Client();
 
 var prefix = "k!";
 
-client.login("NDI0ODg0Njc4NTc1NzgzOTU2.Da-htw.hWjoNwqfq6bs7Suav2vj_Y4gCNs")
+//DEBUT PARAGRAPHE HEROKU
+app.set('port', (process.env.PORT || 5000))
+
+app.listen(app.get('port'), function(){
+    console.log(`bot en fonctionnement sur le port ${app.get('port')}`)
+})
+
+bot.login(process.env.TOKEN);
 
 client.on("ready", () => {
     console.log("je suis pret et fonctionnel")
